@@ -19,6 +19,6 @@ router.put("/:id", (req, res) => res.send("Edit contact"));
 // @route    DELETE api/contacts/:id
 // @desc     Delete a contact
 // @access   private
-router.delete("/id", (req, res) => res.send("Delete contact"));
+router.delete("/:id", (req, res) => res.send("Delete contact"));
 
 module.exports = router;

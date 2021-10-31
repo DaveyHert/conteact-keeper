@@ -11,9 +11,9 @@ app.get("/", (req, res) =>
   })
 );
 // Defining our routes
+app.use("/api/users", require("./routes/users"));
 app.use("/api/contacts", require("./routes/contacts"));
-app.use("./api/contacts", require("./routes/contacts"));
-app.use("./api/auth", require("./routes/auth"));
+app.use("/api/auth", require("./routes/auth"));
 
 // Create a port or use production port if available
 const PORT = process.env.PORT || 5000;
