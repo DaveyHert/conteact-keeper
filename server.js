@@ -6,6 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Route
-app.get("/", () => `<h1>Hello Wold</h1>`);
+app.get("/", (req, res) =>
+  res.json({
+    name: "David Herbert",
+    level: "300",
+    department: "Computer Science",
+  })
+);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
